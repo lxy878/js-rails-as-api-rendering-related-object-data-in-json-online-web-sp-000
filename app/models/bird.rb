@@ -1,4 +1,4 @@
 class Bird < ApplicationRecord
-  belongs_to :bird
-  belongs_to :location
+  has_many :sightings
+  has_many :locations, through: :sightings
 end
